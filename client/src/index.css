@@ -1,0 +1,168 @@
+/* index.css – global design tokens, resets and shared utility classes */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
+:root {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-soft: #eff6ff;
+  --color-accent: #f59e0b;
+  --color-dark: #0f172a;
+  --color-text: #1e293b;
+  --color-text-muted: #475569;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --color-error: #dc2626;
+  --color-success: #16a34a;
+
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-heading: 'Poppins', var(--font-body);
+
+  --radius: 14px;
+  --shadow-card: 0 4px 20px rgba(15, 23, 42, 0.07);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  color: var(--color-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+/* Layout: footer stays at the bottom on short pages */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.page {
+  padding-block: 3.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Shared button styles used across pages */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.button:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.button-outline:hover {
+  color: #ffffff;
+}
+
+/* Page heading with an accent underline, used at the top of each page */
+.page-title {
+  margin: 0 0 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  text-align: center;
+}
+
+.page-title::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+  background: var(--color-accent);
+}
+
+.page-intro {
+  max-width: 40rem;
+  margin: -1.25rem auto 2.5rem;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* Visible outline for keyboard users only (not on mouse click) */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Gentle fade-in when a new page is shown */
+.main-content > * {
+  animation: page-fade-in 0.35s ease-out;
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Respect users who have asked their OS to minimise motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

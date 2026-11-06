@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <!-- Illustration: the Data-Life Tech website in a browser window -->
+  <rect width="640" height="360" fill="#0a0a0a"/>
+  <g stroke="#14532d" stroke-width="1">
+    <path d="M0 45H640M0 90H640M0 135H640M0 180H640M0 225H640M0 270H640M0 315H640"/>
+    <path d="M45 0V360M90 0V360M135 0V360M180 0V360M225 0V360M270 0V360M315 0V360M360 0V360M405 0V360M450 0V360M495 0V360M540 0V360M585 0V360"/>
+  </g>
+  <rect x="110" y="50" width="420" height="240" rx="12" fill="#111827" stroke="#22c55e" stroke-width="2"/>
+  <rect x="110" y="50" width="420" height="32" rx="12" fill="#1f2937"/>
+  <circle cx="134" cy="66" r="5" fill="#f87171"/><circle cx="152" cy="66" r="5" fill="#fbbf24"/><circle cx="170" cy="66" r="5" fill="#34d399"/>
+  <text x="150" y="140" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Data<tspan fill="#22c55e">Life</tspan></text>
+  <rect x="150" y="160" width="260" height="10" rx="5" fill="#374151"/>
+  <rect x="150" y="180" width="200" height="10" rx="5" fill="#374151"/>
+  <rect x="150" y="215" width="130" height="36" rx="18" fill="#22c55e"/>
+  <text x="215" y="238" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#052e16" text-anchor="middle">Book a call</text>
+  <text x="320" y="330" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">data-life.tech</text>
+</svg>

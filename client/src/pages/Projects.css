@@ -1,0 +1,81 @@
+/* Projects.css – responsive grid of project cards */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.project-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+}
+
+.project-body p {
+  margin: 0 0 0.75rem;
+}
+
+.project-role {
+  color: var(--color-primary);
+}
+
+.project-outcome {
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--color-success);
+  border-radius: 6px;
+  background: #f0fdf4;
+}
+
+/* Tags sit at the bottom so cards of different heights line up */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: auto 0 0;
+  padding: 0.5rem 0 0;
+  list-style: none;
+}
+
+.project-tags li {
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+@media (max-width: 400px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

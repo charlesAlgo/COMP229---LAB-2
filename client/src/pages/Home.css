@@ -1,0 +1,144 @@
+/* Home.css – hero banner, mission statement and quick-link cards */
+
+.hero {
+  background: linear-gradient(135deg, var(--color-primary-soft) 0%, #ffffff 60%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 5rem;
+}
+
+.hero-eyebrow {
+  margin: 0;
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  margin: 0.25rem 0 0.5rem;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.hero-subtitle {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.hero-welcome {
+  max-width: 34rem;
+  font-size: 1.1rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.hero-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-logo .site-logo {
+  width: min(260px, 60vw);
+  height: auto;
+  filter: drop-shadow(0 18px 30px rgba(37, 99, 235, 0.25));
+}
+
+.mission {
+  padding-block: 4rem 2rem;
+  text-align: center;
+}
+
+.mission-statement {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-left: 5px solid var(--color-accent);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: left;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-block: 2rem 4.5rem;
+}
+
+.highlight-card {
+  position: relative;
+  padding: 1.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+  text-decoration: none;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+}
+
+.highlight-card h3 {
+  margin: 0 0 0.35rem;
+}
+
+.highlight-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.highlight-arrow {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: var(--color-primary);
+  font-size: 1.4rem;
+}
+
+@media (max-width: 760px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding-block: 3rem;
+    text-align: center;
+  }
+
+  .hero-welcome {
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-logo {
+    order: -1;
+  }
+
+  .hero-logo .site-logo {
+    width: 150px;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+}

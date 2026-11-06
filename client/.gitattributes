@@ -1,0 +1,6 @@
+# Keep source files as LF and never convert line endings in binary assets
+* text=auto eol=lf
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
